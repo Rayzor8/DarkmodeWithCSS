@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+
+*::before,
+*,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --main-bgColor-light: royalblue;
+  --light-bg: white;
+  --color-light: #222;
+  --color-btn: #111;
+}
+
+
+html[data-color-mode="dark"]{
+  --main-bgColor-light: #111;
+  --light-bg: #555;
+  --color-light: white;
+  --color-btn: #111;
+}
+
+body {
+  background-color: var(--main-bgColor-light);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: calc(2vw + 6px);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  transition: 300ms ease-in;
+
+  @media (min-width : 768px) {
+      font-size: 1.2rem;
+  }
+}
+
+
+.container {
+  max-width: 800px;
+  width: 90%;
+  background-color: var(--light-bg);
+  color: var(--color-light);
+  margin: 50px auto;
+  padding: 2rem;
+  text-align: justify;
+  border-radius: 4px;
+  transition: 300ms ease-in;
+}
+
+h1 {
+  text-align: center;
+  padding: 0;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 900;
+  span {
+    font-weight: 300;
+    font-size: 1.4rem;
+    font-style: oblique;
+  }
+}
+
+
+.btn{
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  border-color: var(--main-bgColor-light);
+  color: var(--color-btn);
+  transition:  200ms ease;
+  &:hover{
+    background-color: var(--main-bgColor-light);
+    border-color: transparent;
+    color: white;
+  }
+}
